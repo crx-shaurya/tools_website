@@ -6,6 +6,23 @@ body {
   color: #22c55e; /* Tailwind green-500 */
 }
 
+body {
+  background-color: #0f172a; /* Tailwind's slate-900 */
+  color: #22c55e; /* Tailwind's green-500 */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+  padding: 1rem 0;
+  text-align: center;
+  background-color: #064e3b; /* Dark green */
+  color: #a7f3d0; /* Light green */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+
 h1.glitch {
   position: relative;
   color: #22c55e;
