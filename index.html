@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hacker Toolkit</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body class="min-h-screen">
+  <header class="text-center py-10">
+    <h1 class="text-5xl glitch font-bold">Hacker Toolkit</h1>
+    <p class="text-xl mt-2">Tools for Beginners to Elite Hackers</p>
+    <div class="mt-6">
+      <input
+        type="text"
+        placeholder="Search Tools..."
+        class="w-1/2 px-4 py-2 bg-black border border-green-500 text-green-400 rounded"
+        id="searchInput"
+      />
+    </div>
+  </header>
+
+  <main class="px-8 pb-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="toolGrid">
+      <a href="tools/code-encoder.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">Code Encoder/Decoder</h2>
+        <p class="mt-2 text-sm text-green-300">Base64, URL, Hex encoders and decoders.</p>
+      </a>
+      <a href="tools/payload-generator.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">Payload Generator</h2>
+        <p class="mt-2 text-sm text-green-300">Generate payloads for testing and learning.</p>
+      </a>
+      <a href="tools/password-generator.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">Password Generator</h2>
+        <p class="mt-2 text-sm text-green-300">Create strong, secure passwords instantly.</p>
+      </a>
+      <a href="tools/hash-calculator.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">Hash Calculator</h2>
+        <p class="mt-2 text-sm text-green-300">MD5, SHA-1, SHA-256 calculators.</p>
+      </a>
+      <a href="tools/color-converter.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">Color Converter</h2>
+        <p class="mt-2 text-sm text-green-300">Convert HEX ↔ RGB ↔ HSL and pick colors instantly.</p>
+      </a>
+      <a href="tools/regex-tester.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">Regex Tester</h2>
+        <p class="mt-2 text-sm text-green-300">Test and visualize regular expressions with live feedback.</p>
+      </a>
+      <a href="tools/hash-generator.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">Hash Generator</h2>
+        <p class="mt-2 text-sm text-green-300">Generate MD5, SHA1, SHA256 hashes in-browser.</p>
+      </a>
+      <a href="tools/user-agent-parser.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">User-Agent Parser</h2>
+        <p class="mt-2 text-sm text-green-300">Parse browser/device info easily.</p>
+      </a>
+      <a href="tools/json-formatter.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">JSON Formatter</h2>
+        <p class="mt-2 text-sm text-green-300">Format & validate JSON quickly.</p>
+      </a>
+      <a href="tools/ip-lookup.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">IP Lookup</h2>
+        <p class="mt-2 text-sm text-green-300">Get geolocation data from IP.</p>
+      </a>
+      <a href="tools/dns-lookup.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">DNS Lookup</h2>
+        <p class="mt-2 text-sm text-green-300">Check DNS records of domains.</p>
+      </a>
+      <a href="tools/port-scanner.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">Port Scanner</h2>
+        <p class="mt-2 text-sm text-green-300">Scan open ports (local only).</p>
+      </a>
+      <a href="tools/text-encoder.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">Text Encoder / Decoder</h2>
+        <p class="mt-2 text-sm text-green-300">Base64, URL & HTML encode/decode in one place.</p>
+      </a>
+      <a href="tools/jwt-decoder.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">JWT Decoder</h2>
+        <p class="mt-2 text-sm text-green-300">Decode and view JSON Web Tokens locally.</p>
+      </a>
+      <a href="tools/qr-generator.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">QR Code Generator</h2>
+        <p class="mt-2 text-sm text-green-300">Generate QR codes for text, links or contact info.</p>
+      </a>
+      <a href="tools/cron-parser.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">Cron Parser</h2>
+        <p class="mt-2 text-sm text-green-300">Visualize and validate cron job expressions.</p>
+      </a>
+      <a href="tools/markdown-previewer.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">Markdown Previewer</h2>
+        <p class="mt-2 text-sm text-green-300">Render and preview Markdown with styling.</p>
+      </a>
+      <a href="tools/payload-encoder.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">Payload Encoder</h2>
+        <p class="mt-2 text-sm text-green-300">Encode payloads for XSS, SQLi, and other injections.</p>
+      </a>
+      <a href="tools/xss-library.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">XSS Payload Library</h2>
+        <p class="mt-2 text-sm text-green-300">A curated list of XSS payloads for testing (read-only).</p>
+      </a>
+      <a href="tools/encryption-tool.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">AES Encryption</h2>
+        <p class="mt-2 text-sm text-green-300">Encrypt or decrypt text using AES (in-browser).</p>
+      </a>
+      <a href="tools/link-extractor.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">Link Extractor</h2>
+        <p class="mt-2 text-sm text-green-300">Paste a webpage source and extract all links.</p>
+      </a>
+      <a href="tools/js-obfuscator.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold">JS Obfuscator</h2>
+        <p class="mt-2 text-sm text-green-300">Make your JavaScript code unreadable and harder to reverse.</p>
+      </a>
+    </div>
+  </main>
+
+
+<footer>
+    &copy; 2025 Hacker Toolkit. All Rights Reserved.
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
