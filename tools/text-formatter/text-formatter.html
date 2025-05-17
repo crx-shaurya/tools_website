@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Formatter</title>
+  <link rel="stylesheet" href="text-formatter.css" />
+</head>
+<body class="bg-black text-white p-6 min-h-screen">
+  <h1 class="text-4xl font-bold text-yellow-400 mb-6">Text Formatter</h1>
+
+  <label for="inputText">Enter Text:</label>
+  <textarea id="inputText" class="input mb-4" rows="6" placeholder="Paste or type your text here..."></textarea>
+
+  <label for="formatType">Choose Format:</label>
+  <select id="formatType" class="input mb-4">
+    <option value="uppercase">UPPERCASE</option>
+    <option value="lowercase">lowercase</option>
+    <option value="sentencecase">Sentence case</option>
+    <option value="capitalize">Capitalize Each Word</option>
+    <option value="removeSpaces">Remove Extra Spaces</option>
+  </select>
+
+  <button class="btn bg-blue-600" onclick="formatText()">Format Text</button>
+
+  <div class="mt-6">
+    <h2 class="text-xl font-semibold mb-2">Formatted Text:</h2>
+    <textarea id="outputText" class="input" rows="6" readonly></textarea>
+  </div>
+
+  <script src="text-formatter.js"></script>
+</body>
+</html>

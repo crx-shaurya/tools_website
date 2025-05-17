@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password List Generator</title>
+  <link rel="stylesheet" href="list-maker.css" />
+</head>
+<body class="bg-black text-white p-6 min-h-screen">
+  <h1 class="text-4xl font-bold text-purple-400 mb-6">Password List Generator</h1>
+
+  <label class="block mb-2">Base Words (comma-separated):</label>
+  <input type="text" id="baseWords" class="input" placeholder="example: admin,password,123456" />
+
+  <label class="block mt-4 mb-2">Add Numbers (e.g., 1–100)?</label>
+  <input type="checkbox" id="addNumbers" class="mr-2" /> Yes
+
+  <label class="block mt-4 mb-2">Include Special Characters?</label>
+  <input type="checkbox" id="addSpecialChars" class="mr-2" /> Yes
+
+  <button onclick="generatePasswords()" class="btn bg-purple-600 mt-6">Generate</button>
+  <button onclick="downloadPasswords()" class="btn bg-green-600 mt-6 ml-4">Download .txt</button>
+
+  <div class="mt-6">
+    <h2 class="text-xl font-semibold mb-2">Generated Passwords:</h2>
+    <textarea id="passwordList" rows="10" class="input text-sm"></textarea>
+  </div>
+
+  <script src="list-maker.js"></script>
+</body>
+</html>

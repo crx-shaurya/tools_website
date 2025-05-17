@@ -1,0 +1,35 @@
+body {
+  font-family: 'Courier New', monospace;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.storage-item {
+  border: 1px solid #f56565;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+}
+
+.key {
+  font-weight: bold;
+  color: #f56565;
+}
+
+.value {
+  color: #d1d5db;
+  margin-top: 0.5rem;
+  word-break: break-word;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prompt Crafter</title>
+  <link rel="stylesheet" href="prompt-crafter.css" />
+</head>
+<body class="bg-black text-white p-6 min-h-screen">
+  <h1 class="text-3xl font-bold text-red-500 mb-6">AI Prompt Crafter</h1>
+
+  <div class="space-y-4">
+    <textarea id="goal" class="input" placeholder="What do you want the AI to do? (e.g., summarize a paragraph)"></textarea>
+    <textarea id="context" class="input" placeholder="Context (optional)"></textarea>
+    <textarea id="style" class="input" placeholder="Tone, style, or format (e.g., formal, bullet points, JSON, etc.)"></textarea>
+    <button onclick="generatePrompt()" class="btn bg-red-600">Craft Prompt</button>
+  </div>
+
+  <div id="outputSection" class="mt-6 hidden">
+    <h2 class="text-2xl font-semibold text-red-400 mb-2">Crafted Prompt</h2>
+    <div id="craftedPrompt" class="bg-zinc-900 p-4 rounded text-white whitespace-pre-wrap"></div>
+    <button onclick="copyPrompt()" class="btn bg-green-600 mt-4">Copy to Clipboard</button>
+  </div>
+
+  <script src="prompt-crafter.js"></script>
+</body>
+</html>

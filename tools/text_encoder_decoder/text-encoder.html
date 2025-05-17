@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Encoder/Decoder</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="text-encoder.css" />
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center px-4">
+  <h1 class="text-3xl font-bold mb-4">Code Encoder / Decoder</h1>
+
+  <div class="w-full max-w-xl">
+    <select id="mode" class="w-full mb-4 p-2 rounded bg-gray-800 text-white border border-gray-600">
+      <option value="base64">Base64</option>
+      <option value="url">URL</option>
+      <option value="hex">Hex</option>
+    </select>
+
+    <textarea id="inputText" placeholder="Enter text..." class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 h-32 mb-4"></textarea>
+
+    <div class="flex justify-between gap-4 mb-4">
+      <button id="encodeBtn" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Encode</button>
+      <button id="decodeBtn" class="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Decode</button>
+    </div>
+
+    <textarea id="outputText" readonly class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 h-32"></textarea>
+  </div>
+
+  <script src="text-encoder.js"></script>
+</body>
+</html>

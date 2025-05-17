@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR Code Generator / Scanner</title>
+  <link rel="stylesheet" href="qr-tool.css" />
+</head>
+<body class="bg-black text-white p-6 min-h-screen">
+  <h1 class="text-4xl font-bold text-red-500 mb-6">QR Code Generator & Scanner</h1>
+
+  <div class="mb-6">
+    <label for="qrInput">Text to Generate:</label>
+    <input type="text" id="qrInput" class="input" placeholder="Enter text or URL" />
+    <button class="btn bg-red-600 mt-2" onclick="generateQR()">Generate QR</button>
+    <div id="qrOutput" class="mt-4"></div>
+  </div>
+
+  <hr class="my-6 border-red-600" />
+
+  <div class="mb-4">
+    <h2 class="text-2xl font-semibold mb-2">QR Scanner</h2>
+    <button class="btn bg-red-600" onclick="startScanner()">Start Scanning</button>
+    <video id="preview" class="mt-4" width="300"></video>
+    <p id="scannedResult" class="mt-4 text-green-400 font-mono"></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html5-qrcode/minified/html5-qrcode.min.js"></script>
+  <script src="qr-tool.js"></script>
+</body>
+</html>

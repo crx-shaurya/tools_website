@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>API Request Builder</title>
+  <link rel="stylesheet" href="../styles/api-request-builder.css" />
+</head>
+<body class="bg-black text-white p-6 min-h-screen">
+  <h1 class="text-4xl font-bold text-purple-400 mb-6">API Request Builder</h1>
+
+  <label class="block mb-2">API URL:</label>
+  <input id="apiUrl" type="text" placeholder="https://api.example.com/data" class="input" />
+
+  <label class="block mt-4 mb-2">Request Method:</label>
+  <select id="method" class="input">
+    <option value="GET">GET</option>
+    <option value="POST">POST</option>
+  </select>
+
+  <label class="block mt-4 mb-2">Headers (JSON):</label>
+  <textarea id="headers" rows="3" placeholder='{"Authorization": "Bearer token"}' class="input"></textarea>
+
+  <label class="block mt-4 mb-2">Body (JSON for POST):</label>
+  <textarea id="body" rows="4" placeholder='{"key": "value"}' class="input"></textarea>
+
+  <button onclick="sendRequest()" class="btn bg-purple-600 mt-6">Send Request</button>
+
+  <div id="response" class="mt-6 whitespace-pre-wrap text-sm bg-gray-900 p-4 rounded border border-purple-500"></div>
+
+  <script src="../scripts/api-request-builder.js"></script>
+</body>
+</html>

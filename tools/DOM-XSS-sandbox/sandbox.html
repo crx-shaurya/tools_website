@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DOM XSS Sandbox</title>
+  <link rel="stylesheet" href="sandbox.css" />
+</head>
+<body class="bg-black text-white p-6">
+  <h1 class="text-3xl font-bold text-yellow-400 mb-4">DOM XSS Sandbox</h1>
+  <p class="text-gray-400 mb-2">Enter a payload (like <code>?input=&lt;script&gt;alert(1)&lt;/script&gt;</code>) in the URL or below:</p>
+
+  <input type="text" id="userInput" class="input mb-4" placeholder='Try: <img src=x onerror=alert("XSS")>' />
+  <button onclick="injectXSS()" class="btn">Inject Payload</button>
+
+  <div class="mt-6">
+    <h2 class="text-xl font-semibold text-yellow-300 mb-2">Output Area</h2>
+    <div id="output" class="bg-zinc-900 p-4 rounded text-white min-h-[100px]"></div>
+  </div>
+
+  <script src="sandbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reflected URL Builder</title>
+  <link rel="stylesheet" href="url.css" />
+</head>
+<body class="bg-black text-white p-6">
+  <h1 class="text-3xl font-bold text-purple-400 mb-4">Reflected URL Builder</h1>
+
+  <div class="mb-4">
+    <label for="baseUrl" class="block text-sm mb-1">Base URL:</label>
+    <input id="baseUrl" class="input" placeholder="https://example.com/page.html" />
+  </div>
+
+  <div id="param-container" class="mb-4">
+    <div class="param-set mb-2">
+      <input class="param-key input inline-block w-[45%]" placeholder="key" />
+      <input class="param-value input inline-block w-[45%] ml-2" placeholder="value" />
+    </div>
+  </div>
+
+  <button onclick="addParam()" class="btn mb-4">+ Add Parameter</button>
+  <button onclick="generateURL()" class="btn">Generate URL</button>
+
+  <div class="mt-6">
+    <h2 class="text-xl text-purple-300 mb-2">Generated URL:</h2>
+    <div id="generatedUrl" class="break-all bg-zinc-900 p-4 rounded text-white"></div>
+  </div>
+
+  <script src="url.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+body {
+  font-family: 'Courier New', monospace;
+}
+
+.hash-btn {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hash-btn:hover {
+  opacity: 0.9;
+}

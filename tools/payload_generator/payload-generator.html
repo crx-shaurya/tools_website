@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payload Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="payload-generator.css"/>
+</head>
+<body class="bg-black text-white flex items-center justify-center min-h-screen p-4">
+  <div class="w-full max-w-lg">
+    <h1 class="text-3xl font-bold mb-4 text-center">Payload Generator</h1>
+
+    <select id="payloadType" class="w-full mb-4 p-2 rounded bg-gray-800 border border-gray-700">
+      <option value="xss">XSS</option>
+      <option value="sqli">SQL Injection</option>
+      <option value="cmd">Command Injection</option>
+      <option value="lfi">Local File Inclusion</option>
+      <option value="ssrf">SSRF</option>
+    </select>
+
+    <button id="generateBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">
+      Generate Payload
+    </button>
+
+    <textarea id="payloadOutput" readonly class="w-full p-3 rounded bg-gray-800 border border-gray-600 h-32"></textarea>
+  </div>
+
+  <script src="payload-generator.js"></script>
+</body>
+</html>

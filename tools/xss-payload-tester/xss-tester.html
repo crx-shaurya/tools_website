@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>XSS Payload Tester</title>
+  <link rel="stylesheet" href="xss-tester.css" />
+</head>
+<body class="bg-black text-white p-6">
+  <h1 class="text-3xl font-bold text-red-400 mb-4">XSS Payload Tester</h1>
+
+  <textarea id="payload" placeholder="Enter XSS payload here..." class="input w-full mb-4" rows="4"></textarea>
+  <div class="mb-4">
+    <button onclick="injectPayload()" class="btn">Inject Payload</button>
+    <button onclick="clearOutput()" class="btn">Clear</button>
+  </div>
+
+  <h2 class="text-lg text-red-300 mb-2">Output (Sanitized DIV):</h2>
+  <div id="output" class="bg-zinc-800 p-4 rounded min-h-[100px] text-white"></div>
+
+  <script src="xss-tester.js"></script>
+</body>
+</html>

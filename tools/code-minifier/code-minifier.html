@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Code Minifier / Beautifier</title>
+  <link rel="stylesheet" href="../styles/code-minifier-beautifier.css" />
+</head>
+<body class="bg-black text-white p-6 min-h-screen">
+  <h1 class="text-4xl font-bold text-red-500 mb-6">Code Minifier / Beautifier</h1>
+
+  <div class="mb-4">
+    <label for="codeType">Select Code Type:</label>
+    <select id="codeType" class="input">
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">JavaScript</option>
+    </select>
+  </div>
+
+  <label for="codeInput">Enter Your Code:</label>
+  <textarea id="codeInput" class="input mb-4" rows="10" placeholder="Paste your code here..."></textarea>
+
+  <div class="mb-4">
+    <button class="btn bg-red-600" onclick="beautifyCode()">Beautify</button>
+    <button class="btn bg-red-600" onclick="minifyCode()">Minify</button>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-semibold mb-2">Output:</h2>
+    <pre id="outputCode" class="result-box"></pre>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-beautify@1.14.7/js/lib/beautify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-beautify@1.14.7/js/lib/beautify-css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-beautify@1.14.7/js/lib/beautify-html.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uglify-js@3.17.4/dist/uglify-js.min.js"></script>
+  <script src="../scripts/code-minifier-beautifier.js"></script>
+</body>
+</html>

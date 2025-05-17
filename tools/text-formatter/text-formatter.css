@@ -1,0 +1,32 @@
+body {
+  font-family: 'Courier New', monospace;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #ecc94b;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #faf089;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}

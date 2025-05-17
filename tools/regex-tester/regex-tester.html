@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regex Tester</title>
+  <link rel="stylesheet" href="regex-tester.css" />
+</head>
+<body class="bg-black text-white p-6 min-h-screen">
+  <h1 class="text-4xl font-bold text-red-500 mb-6">Regex Tester</h1>
+
+  <label for="regexInput">Enter Regex Pattern:</label>
+  <input id="regexInput" type="text" class="input mb-4" placeholder="e.g. ^[a-zA-Z0-9]+$" />
+
+  <label for="testString">Test String:</label>
+  <textarea id="testString" class="input mb-4" rows="6" placeholder="Enter string to test against regex..."></textarea>
+
+  <button class="btn bg-red-600" onclick="testRegex()">Test Regex</button>
+
+  <div class="mt-6">
+    <h2 class="text-xl font-semibold mb-2">Result:</h2>
+    <pre id="result" class="result-box"></pre>
+  </div>
+
+  <script src="regex-tester.js"></script>
+</body>
+</html>

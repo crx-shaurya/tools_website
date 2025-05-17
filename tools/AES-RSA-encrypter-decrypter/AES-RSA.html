@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AES / RSA Encrypt-Decrypt</title>
+  <link rel="stylesheet" href="../styles/aes-rsa-encryption.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/node-forge@1.3.1/dist/forge.min.js"></script>
+</head>
+<body class="bg-black text-white p-6 min-h-screen">
+  <h1 class="text-4xl font-bold text-yellow-400 mb-6">AES / RSA Encrypter & Decrypter</h1>
+
+  <label>Select Algorithm:</label>
+  <select id="algorithm" class="input mb-4">
+    <option value="aes">AES</option>
+    <option value="rsa">RSA</option>
+  </select>
+
+  <label>Enter Text:</label>
+  <textarea id="inputText" class="input mb-4" rows="4" placeholder="Text to encrypt or decrypt..."></textarea>
+
+  <div id="keySection" class="mb-4">
+    <label id="keyLabel">Key / Password:</label>
+    <input type="text" id="key" class="input" placeholder="Enter key or password" />
+  </div>
+
+  <button class="btn bg-blue-600" onclick="encrypt()">Encrypt</button>
+  <button class="btn bg-green-600 ml-4" onclick="decrypt()">Decrypt</button>
+
+  <div class="mt-6">
+    <h2 class="text-xl font-semibold mb-2">Result:</h2>
+    <textarea id="outputText" rows="6" class="input text-sm"></textarea>
+  </div>
+
+  <script src="../scripts/aes-rsa-encryption.js"></script>
+</body>
+</html>

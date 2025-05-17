@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hash Cracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="hash-cracker.css"/>
+</head>
+<body class="bg-black text-white flex items-center justify-center min-h-screen p-4">
+  <div class="w-full max-w-md">
+    <h1 class="text-3xl font-bold mb-4 text-center">Hash Cracker</h1>
+
+    <input type="text" id="hashInput" placeholder="Enter hash" class="w-full mb-4 p-2 rounded bg-gray-800 border border-gray-700" />
+
+    <select id="hashType" class="w-full mb-4 p-2 rounded bg-gray-800 border border-gray-700">
+      <option value="md5">MD5</option>
+      <option value="sha1">SHA1</option>
+      <option value="sha256">SHA256</option>
+    </select>
+
+    <button id="crackBtn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mb-4">
+      Crack Hash
+    </button>
+
+    <div id="result" class="text-green-400 text-center font-mono text-xl"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="hash-cracker.js"></script>
+</body>
+</html>
