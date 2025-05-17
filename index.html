@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hacker Toolkit</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-black text-white min-h-screen">
+
+  <header class="text-center py-10">
+    <h1 class="text-5xl glitch font-bold text-green-400">Hacker Toolkit</h1>
+    <p class="text-xl mt-2 text-gray-300">Tools for Beginners to Elite Hackers</p>
+    <div class="mt-6">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search Tools..."
+        class="w-1/2 px-4 py-2 bg-black border border-green-500 text-green-300 rounded"
+        autocomplete="off"
+      />
+    </div>
+  </header>
+
+  <main class="px-8 pb-20">
+    <div id="toolGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Green Tools -->
+      <a href="tools/code-encoder.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold text-green-300">Code Encoder/Decoder</h2>
+        <p class="mt-2 text-sm text-green-200">Base64, URL, Hex encoders and decoders.</p>
+      </a>
+
+      <!-- Red Tools -->
+      <a href="tools/payload-generator.html" class="tool-card p-6 border border-red-400 rounded hover:bg-red-900 transition">
+        <h2 class="text-2xl font-bold text-red-300">Payload Generator</h2>
+        <p class="mt-2 text-sm text-red-200">Generate payloads for testing and learning.</p>
+      </a>
+
+      <!-- Yellow Tools -->
+      <a href="tools/password-generator.html" class="tool-card p-6 border border-yellow-400 rounded hover:bg-yellow-900 transition">
+        <h2 class="text-2xl font-bold text-yellow-300">Password Generator</h2>
+        <p class="mt-2 text-sm text-yellow-200">Create strong, secure passwords instantly.</p>
+      </a>
+
+      <!-- Cyan Tools -->
+      <a href="tools/hash-calculator.html" class="tool-card p-6 border border-cyan-400 rounded hover:bg-cyan-900 transition">
+        <h2 class="text-2xl font-bold text-cyan-300">Hash Calculator</h2>
+        <p class="mt-2 text-sm text-cyan-200">MD5, SHA-1, SHA-256 calculators.</p>
+      </a>
+
+      <a href="tools/color-converter.html" class="tool-card p-6 border border-yellow-400 rounded hover:bg-yellow-900 transition">
+        <h2 class="text-2xl font-bold text-yellow-300">Color Converter</h2>
+        <p class="mt-2 text-sm text-yellow-200">Convert HEX ↔ RGB ↔ HSL and pick colors instantly.</p>
+      </a>
+
+      <a href="tools/regex-tester.html" class="tool-card p-6 border border-cyan-400 rounded hover:bg-cyan-900 transition">
+        <h2 class="text-2xl font-bold text-cyan-300">Regex Tester</h2>
+        <p class="mt-2 text-sm text-cyan-200">Test and visualize regular expressions with live feedback.</p>
+      </a>
+
+      <a href="tools/hash-generator.html" class="tool-card p-6 border border-green-400 rounded hover:bg-green-900 transition">
+        <h2 class="text-2xl font-bold text-green-300">Hash Generator</h2>
+        <p class="mt-2 text-sm text-green-200">Generate MD5, SHA1, SHA256 hashes in-browser.</p>
+      </a>
+
+      <a href="tools/user-agent-parser.html" class="tool-card p-6 border border-cyan-400 rounded hover:bg-cyan-900 transition">
+        <h2 class="text-2xl font-bold text-cyan-300">User-Agent Parser</h2>
+        <p class="mt-2 text-sm text-cyan-200">Parse browser/device info easily.</p>
+      </a>
+
+      <a href="tools/json-formatter.html" class="tool-card p-6 border border-yellow-400 rounded hover:bg-yellow-900 transition">
+        <h2 class="text-2xl font-bold text-yellow-300">JSON Formatter</h2>
+        <p class="mt-2 text-sm text-yellow-200">Format & validate JSON quickly.</p>
+      </a>
+
+      <a href="tools/ip-lookup.html" class="tool-card p-6 border border-red-400 rounded hover:bg-red-900 transition">
+        <h2 class="text-2xl font-bold text-red-300">IP Lookup</h2>
+        <p class="mt-2 text-sm text-red-200">Get geolocation data from IP.</p>
+      </a>
+
+      <a href="tools/dns-lookup.html" class="tool-card p-6 border border-cyan-400 rounded hover:bg-cyan-900 transition">
+        <h2 class="text-2xl font-bold text-cyan-300">DNS Lookup</h2>
+        <p class="mt-2 text-sm text-cyan-200">Check DNS records of domains.</p>
+      </a>
+
+      <a href="tools/port-scanner.html" class="tool-card p-6 border border-red-400 rounded hover:bg-red-900 transition">
+        <h2 class="text-2xl font-bold text-red-300">Port Scanner</h2>
+        <p class="mt-2 text-sm text-red-200">Scan open ports (local only).</p>
+      </a>
+      
+    </div>
+  </main>
+
+  <footer class="text-center text-green-600 py-6 border-t border-green-800">
+    &copy; 2025 Hacker Toolkit. All tools run fully client-side.
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
