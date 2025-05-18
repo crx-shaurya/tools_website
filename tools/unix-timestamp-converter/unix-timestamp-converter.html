@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unix Timestamp Converter</title>
+  <link rel="stylesheet" href="unix-timestamp-converter.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Unix Timestamp Converter</h1>
+    
+    <div class="converter-section">
+      <label for="dateInput">Date to Timestamp:</label>
+      <input type="datetime-local" id="dateInput" />
+      <button id="toTimestampBtn">Convert to Timestamp</button>
+      <div id="timestampOutput" class="output"></div>
+    </div>
+
+    <div class="converter-section">
+      <label for="timestampInput">Timestamp to Date:</label>
+      <input type="number" id="timestampInput" placeholder="Enter Unix timestamp" />
+      <button id="toDateBtn">Convert to Date</button>
+      <div id="dateOutput" class="output"></div>
+    </div>
+  </div>
+
+  <script src="unix-timestamp-converter.js"></script>
+</body>
+</html>

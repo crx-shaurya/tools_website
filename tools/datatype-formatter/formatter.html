@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Formatter</title>
+  <link rel="stylesheet" href="formatter.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Text Formatter</h1>
+
+    <label for="formatSelect">Select Format Action:</label>
+    <select id="formatSelect">
+      <option value="json-prettify">JSON Prettify</option>
+      <option value="json-minify">JSON Minify</option>
+      <option value="csv-to-json">CSV to JSON</option>
+      <option value="json-to-csv">JSON to CSV</option>
+      <option value="uppercase">Uppercase</option>
+      <option value="lowercase">Lowercase</option>
+      <option value="capitalize">Capitalize Each Word</option>
+      <option value="remove-spaces">Remove Extra Spaces</option>
+    </select>
+
+    <label for="inputText">Input Text:</label>
+    <textarea id="inputText" rows="10" placeholder="Paste your text here..."></textarea>
+
+    <button id="formatBtn">Format</button>
+
+    <label for="outputText">Output Text:</label>
+    <textarea id="outputText" rows="10" readonly></textarea>
+  </div>
+
+  <script src="formatter.js"></script>
+</body>
+</html>

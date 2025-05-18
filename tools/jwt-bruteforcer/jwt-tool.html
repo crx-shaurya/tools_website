@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JWT Bruteforcer</title>
+  <link rel="stylesheet" href="jwt-bruteforcer.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>JWT Bruteforcer (HS256)</h1>
+
+    <label for="jwtInput">JWT Token:</label>
+    <textarea id="jwtInput" rows="3" placeholder="Paste JWT here (header.payload.signature)"></textarea>
+
+    <label for="wordlistInput">Wordlist (one key per line):</label>
+    <textarea id="wordlistInput" rows="10" placeholder="Enter keys to try..."></textarea>
+
+    <button id="startBtn">Start Bruteforce</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jsrsasign"></script>
+  <script src="jwt-bruteforcer.js"></script>
+</body>
+</html>
