@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Obfuscator / Deobfuscator</title>
+  <link rel="stylesheet" href="ob-deob.css" />
+</head>
+<body class="bg-black text-white p-6">
+  <h1 class="text-3xl font-bold text-purple-400 mb-4">JS Obfuscator / Deobfuscator</h1>
+
+  <textarea id="jsInput" class="textarea" placeholder="Enter your JavaScript code..."></textarea>
+
+  <div class="flex gap-4 my-4">
+    <button onclick="obfuscateJS()" class="btn">Obfuscate</button>
+    <button onclick="deobfuscateJS()" class="btn">Deobfuscate</button>
+    <button onclick="copyResult()" class="btn bg-green-600">Copy Result</button>
+  </div>
+
+  <textarea id="jsOutput" class="textarea" placeholder="Result..." readonly></textarea>
+
+  <script src="ob-deob.js"></script>
+</body>
+</html>

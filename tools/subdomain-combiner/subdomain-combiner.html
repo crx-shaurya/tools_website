@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Subdomain Combiner</title>
+  <link rel="stylesheet" href="../styles/subdomain-combiner.css" />
+</head>
+<body class="bg-black text-white p-6">
+  <h1 class="text-3xl font-bold text-blue-400 mb-4">Subdomain + Wordlist Combiner</h1>
+
+  <label for="baseDomain">Enter base domain:</label>
+  <input type="text" id="baseDomain" class="input" placeholder="example.com" />
+
+  <label for="wordlist">Enter subdomain wordlist (one per line):</label>
+  <textarea id="wordlist" class="textarea" placeholder="admin\nmail\nftp\n..."></textarea>
+
+  <div class="flex gap-4 mt-2">
+    <button onclick="combineSubs()" class="btn">Generate</button>
+    <button onclick="downloadList()" class="btn">Download .txt</button>
+  </div>
+
+  <div id="output" class="output mt-4"></div>
+
+  <script src="../scripts/subdomain-combiner.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HMAC Generator</title>
+  <link rel="stylesheet" href="hmac.css" />
+</head>
+<body class="bg-black text-white p-6">
+  <h1 class="text-3xl font-bold text-purple-400 mb-4">HMAC Generator</h1>
+
+  <label>Message:</label>
+  <textarea id="hmacMessage" class="textarea" placeholder="Enter message..."></textarea>
+
+  <label>Secret Key:</label>
+  <input id="hmacKey" class="input" placeholder="Enter secret key..." />
+
+  <label>Hash Algorithm:</label>
+  <select id="hmacAlgo" class="input">
+    <option value="SHA-256">SHA-256</option>
+    <option value="SHA-1">SHA-1</option>
+    <option value="SHA-384">SHA-384</option>
+    <option value="SHA-512">SHA-512</option>
+  </select>
+
+  <div class="flex gap-4 my-4">
+    <button onclick="generateHMAC()" class="btn">Generate HMAC</button>
+    <button onclick="copyHMAC()" class="btn bg-green-600">Copy</button>
+  </div>
+
+  <textarea id="hmacOutput" class="textarea" placeholder="HMAC output..." readonly></textarea>
+
+  <script src="hmac.js"></script>
+</body>
+</html>

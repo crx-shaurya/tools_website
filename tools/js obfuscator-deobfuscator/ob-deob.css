@@ -1,0 +1,21 @@
+.textarea {
+  width: 100%;
+  height: 200px;
+  background-color: #1e1e1e;
+  color: #f3f3f3;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #a78bfa;
+  resize: vertical;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  background-color: #a78bfa;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}

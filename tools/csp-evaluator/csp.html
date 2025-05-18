@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSP Evaluator</title>
+  <link rel="stylesheet" href="csp.css" />
+</head>
+<body class="bg-black text-white p-6">
+  <h1 class="text-3xl font-bold text-blue-400 mb-4">CSP Evaluator</h1>
+
+  <label for="cspInput">Paste your CSP header:</label>
+  <textarea id="cspInput" class="textarea" placeholder="Content-Security-Policy: default-src 'self'; script-src 'none';"></textarea>
+
+  <button onclick="evaluateCSP()" class="btn">Evaluate CSP</button>
+
+  <div id="result" class="output mt-4"></div>
+
+  <script src="csp.js"></script>
+</body>
+</html>

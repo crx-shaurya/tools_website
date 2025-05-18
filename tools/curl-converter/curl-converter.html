@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>cURL to Fetch/Axios Converter</title>
+  <link rel="stylesheet" href="curl-converter.css" />
+</head>
+<body class="bg-black text-white p-6">
+  <h1 class="text-3xl font-bold text-blue-400 mb-4">cURL to Fetch/Axios Converter</h1>
+
+  <label for="curlInput">Paste your cURL command:</label>
+  <textarea id="curlInput" class="textarea" placeholder='curl -X POST https://api.example.com/data -H "Authorization: Bearer token" -d "key=value"'></textarea>
+
+  <div class="flex gap-4 mt-2">
+    <button onclick="convertCurl('fetch')" class="btn">Convert to Fetch</button>
+    <button onclick="convertCurl('axios')" class="btn">Convert to Axios</button>
+  </div>
+
+  <div id="output" class="output mt-4"></div>
+
+  <script src="curl-converter.js"></script>
+</body>
+</html>

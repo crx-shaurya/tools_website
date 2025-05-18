@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel Finder</title>
+  <link rel="stylesheet" href="panel-finder.css" />
+</head>
+<body class="bg-black text-white p-6">
+  <h1 class="text-3xl font-bold text-red-400 mb-4">Admin Panel Finder</h1>
+
+  <input type="text" id="domain" class="input w-full mb-4" placeholder="Enter domain (e.g., example.com)" />
+  <button onclick="startScan()" class="btn mb-4">Start Scan</button>
+
+  <div id="result" class="bg-zinc-900 p-4 rounded min-h-[100px] overflow-auto"></div>
+
+  <script src="panel-finder.js"></script>
+</body>
+</html>
